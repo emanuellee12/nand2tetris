@@ -1,0 +1,11 @@
+
+CHIP And2Of3Way {
+    IN a, b, c;  
+    OUT out;
+    PARTS:
+  	And(a=a, b=b, out=ab);
+	And(a=a, b=c, out=ac);
+	And(a=c, b=b, out=bc);
+	Or(a=ab, b=ac, out=abOac);
+	Or(a=abOac, b=bc, out=out);
+}

@@ -1,0 +1,8 @@
+CHIP Xor3Way {
+    IN a, b, c;  
+    OUT out;
+    PARTS:
+  	Xor(a=a, b=b, out=axb);
+	Xor(a=axb, b=c, out=out);
+
+}
